@@ -101,7 +101,7 @@ BOOL isSmallDeviceSB() {
 - (void)animateTrackToLarge {
     UIView *elapsedTimeLabel = MSHookIvar<UIView *>(self, "_elapsedTimeLabel");
     UIView *remainingTimeLabel = MSHookIvar<UIView *>(self, "_remainingTimeLabel");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         self.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.5);
         elapsedTimeLabel.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 0.7);
         remainingTimeLabel.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 0.7);
@@ -112,7 +112,7 @@ BOOL isSmallDeviceSB() {
 - (void)animateTrackToSmall {
     UIView *elapsedTimeLabel = MSHookIvar<UIView *>(self, "_elapsedTimeLabel");
     UIView *remainingTimeLabel = MSHookIvar<UIView *>(self, "_remainingTimeLabel");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         self.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0);
         elapsedTimeLabel.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0);
         remainingTimeLabel.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0);
@@ -218,7 +218,7 @@ BOOL isSmallDeviceSB() {
     UIView *visualElement = MSHookIvar<UIView *>(self, "_visualElement");
     UIView *minValueImageView = MSHookIvar<UIView *>(visualElement, "_minValueImageView");
     UIView *maxValueImageView = MSHookIvar<UIView *>(visualElement, "_maxValueImageView");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         minValueImageView.hidden = YES;
         maxValueImageView.hidden = YES;
         visualElement.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.5);
@@ -230,7 +230,7 @@ BOOL isSmallDeviceSB() {
     UIView *visualElement = MSHookIvar<UIView *>(self, "_visualElement");
     UIView *minValueImageView = MSHookIvar<UIView *>(visualElement, "_minValueImageView");
     UIView *maxValueImageView = MSHookIvar<UIView *>(visualElement, "_maxValueImageView");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         minValueImageView.hidden = NO;
         maxValueImageView.hidden = NO;
         visualElement.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0);

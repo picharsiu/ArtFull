@@ -5,9 +5,9 @@ DEBUG = 0
 
 FINALPACKAGE = 1
 
-#THEOS_PACKAGE_SCHEME=rootless
+THEOS_PACKAGE_SCHEME=rootless
 
-SYSROOT=$(THEOS)/sdks/iphoneos14.5.sdk
+SYSROOT=$(THEOS)/sdks/iPhoneOS14.5.sdk
 
 include $(THEOS)/makefiles/common.mk
 

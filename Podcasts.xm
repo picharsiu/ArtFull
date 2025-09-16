@@ -241,7 +241,7 @@ _UIBackdropView *artfullBlurView;
 - (void)animateTrackToLarge {
     UIView *elapsedTimeLabel = MSHookIvar<UIView *>(self, "elapsedTimeLabel");
     UIView *remainingTimeLabel = MSHookIvar<UIView *>(self, "remainingTimeLabel");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         self.elapsedTrack.layer.cornerRadius = self.elapsedTrack.frame.size.height/2;
         self.remainingTrack.layer.cornerRadius = self.remainingTrack.frame.size.height/2;
         self.bufferTrack.layer.cornerRadius = self.bufferTrack.frame.size.height/2;
@@ -257,7 +257,7 @@ _UIBackdropView *artfullBlurView;
 - (void)animateTrackToSmall {
     UIView *elapsedTimeLabel = MSHookIvar<UIView *>(self, "elapsedTimeLabel");
     UIView *remainingTimeLabel = MSHookIvar<UIView *>(self, "remainingTimeLabel");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         self.elapsedTrack.layer.cornerRadius = self.elapsedTrack.frame.size.height/2;
         self.remainingTrack.layer.cornerRadius = self.remainingTrack.frame.size.height/2;
         self.bufferTrack.layer.cornerRadius = self.bufferTrack.frame.size.height/2;
@@ -367,7 +367,7 @@ _UIBackdropView *artfullBlurView;
     UIView *visualElement = MSHookIvar<UIView *>(self, "_visualElement");
     UIView *minValueImageView = MSHookIvar<UIView *>(visualElement, "_minValueImageView");
     UIView *maxValueImageView = MSHookIvar<UIView *>(visualElement, "_maxValueImageView");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         minValueImageView.hidden = YES;
         maxValueImageView.hidden = YES;
         self.minimumTrackTintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.70];
@@ -381,7 +381,7 @@ _UIBackdropView *artfullBlurView;
     UIView *visualElement = MSHookIvar<UIView *>(self, "_visualElement");
     UIView *minValueImageView = MSHookIvar<UIView *>(visualElement, "_minValueImageView");
     UIView *maxValueImageView = MSHookIvar<UIView *>(visualElement, "_maxValueImageView");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         minValueImageView.hidden = NO;
         maxValueImageView.hidden = NO;
         self.minimumTrackTintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.45];

@@ -59,7 +59,7 @@ UIImageView *artfullMusicView;
         [artfullMusicView.leftAnchor constraintEqualToAnchor:contentView.leftAnchor constant:0].active = YES;
         float halfView = [UIScreen mainScreen].bounds.size.height/2;
         if (isSmallDeviceMusic()) {
-            [artfullMusicView.bottomAnchor constraintEqualToAnchor:contentView.bottomAnchor constant:-halfView+100].active = YES;
+            [artfullMusicView.bottomAnchor constraintEqualToAnchor:contentView.bottomAnchor constant:-halfView+35].active = YES;
         } else if (isLargeDeviceMusic()) {
             [artfullMusicView.bottomAnchor constraintEqualToAnchor:contentView.bottomAnchor constant:-halfView+180].active = YES;
         } else {
@@ -88,7 +88,7 @@ UIImageView *artfullMusicView;
         
         float halfView = [UIScreen mainScreen].bounds.size.height/2;
         if (isSmallDeviceMusic()) {
-            [artfullMusicView.bottomAnchor constraintEqualToAnchor:contentView.bottomAnchor constant:-halfView+100].active = YES;
+            [artfullMusicView.bottomAnchor constraintEqualToAnchor:contentView.bottomAnchor constant:-halfView+0].active = YES;
         } else if (isLargeDeviceMusic()) {
             [artfullMusicView.bottomAnchor constraintEqualToAnchor:contentView.bottomAnchor constant:-halfView+180].active = YES;
         } else {
@@ -102,7 +102,7 @@ UIImageView *artfullMusicView;
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = view.bounds;
     gradientLayer.colors = @[ (id)[UIColor blackColor].CGColor, (id)[UIColor blackColor].CGColor, (id)[UIColor blackColor].CGColor, (id)[UIColor clearColor].CGColor];
-    gradientLayer.locations = @[@0,@0,@0.5,@0.9];
+    gradientLayer.locations = @[@1,@1,@1,@1];
     view.layer.mask = gradientLayer;
 }
 %end
@@ -232,7 +232,7 @@ UIImageView *artfullMusicView;
 - (void)animateTrackToLarge {
     UIView *elapsedTimeLabel = MSHookIvar<UIView *>(self, "elapsedTimeLabel");
     UIView *remainingTimeLabel = MSHookIvar<UIView *>(self, "remainingTimeLabel");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         self.elapsedTrack.layer.cornerRadius = self.elapsedTrack.frame.size.height/2;
         self.remainingTrack.layer.cornerRadius = self.remainingTrack.frame.size.height/2;
         self.elapsedTrack.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.70];
@@ -246,7 +246,7 @@ UIImageView *artfullMusicView;
 - (void)animateTrackToSmall {
     UIView *elapsedTimeLabel = MSHookIvar<UIView *>(self, "elapsedTimeLabel");
     UIView *remainingTimeLabel = MSHookIvar<UIView *>(self, "remainingTimeLabel");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         self.elapsedTrack.layer.cornerRadius = self.elapsedTrack.frame.size.height/2;
         self.remainingTrack.layer.cornerRadius = self.remainingTrack.frame.size.height/2;
         self.elapsedTrack.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.45];
@@ -352,7 +352,7 @@ UIImageView *artfullMusicView;
     UIView *visualElement = MSHookIvar<UIView *>(self, "_visualElement");
     UIView *minValueImageView = MSHookIvar<UIView *>(visualElement, "_minValueImageView");
     UIView *maxValueImageView = MSHookIvar<UIView *>(visualElement, "_maxValueImageView");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         minValueImageView.hidden = YES;
         maxValueImageView.hidden = YES;
         self.minimumTrackTintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.70];
@@ -365,7 +365,7 @@ UIImageView *artfullMusicView;
     UIView *visualElement = MSHookIvar<UIView *>(self, "_visualElement");
     UIView *minValueImageView = MSHookIvar<UIView *>(visualElement, "_minValueImageView");
     UIView *maxValueImageView = MSHookIvar<UIView *>(visualElement, "_maxValueImageView");
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:nil animations:^{
+    [UIView animateWithDuration:0 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.2 options:0 animations:^{
         minValueImageView.hidden = NO;
         maxValueImageView.hidden = NO;
         self.minimumTrackTintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.45];
